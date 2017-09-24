@@ -1,0 +1,2 @@
+#var {shui} {1}
+#act {^对抗寒气中，你增加了} {#if {$shui == 1} {shui bed}}

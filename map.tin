@@ -1,0 +1,102 @@
+#ALIAS {delroom}
+{
+  #map delete %0;
+  ${refresh.minimap}
+}
+
+#ALIAS {findarea}
+{
+  #map find {} {} {} {%0} {};
+  #path show
+}
+
+#ALIAS {findnote}
+{
+  #map find {} {} {} {} {%0};
+  #path show
+}
+
+#ALIAS {findroom}
+{
+  #map find {%0} {} {} {} {};
+  #path show
+}
+
+#ALIAS {goto}
+{
+  #map goto %0;
+  ${refresh.minimap}
+}
+
+#ALIAS {listarea}
+{
+  #map list {} {} {} {%0} {} {}
+}
+
+#ALIAS {listnote}
+{
+  #map list {} {} {} {} {%0} {}
+}
+
+#ALIAS {listroom}
+{
+  #map list {%0} {} {} {} {} {}
+}
+
+#ALIAS {mapoff}
+{
+  #event {MAP ENTER ROOM} {${refresh.minimap}};
+  #map {flag} {static} {on};
+  #echo {Room writes disabled!}
+}
+
+#ALIAS {mapon}
+{
+  #event {MAP ENTER ROOM} {#map set roomarea ${roomarea};${refresh.minimap}};
+  #echo {Mapping enabled! Room Area = <229>${roomarea}<099>. Update with 'zone' command.};
+  #map {flag} {static} {off}
+}
+
+#ALIAS {note}
+{
+  #map set roomnote %0;
+  #echo {RoomNote = <229>%0}
+}
+
+#ALIAS {rinfo}
+{
+  #map info
+}
+
+#ALIAS {symbol}
+{
+  #map set roomsymbol %0;
+  #echo {RoomSymbol = <229>%0}
+}
+
+#ALIAS {undo}
+{
+  #map undo;
+  ${refresh.minimap}
+}
+
+#ALIAS {walk}
+{
+  #path walk
+}
+
+#ALIAS {zone}
+{
+  #variable {roomarea} {%0};
+  #echo {Zone set to:<229> ${roomarea}}
+}
+
+#EVENT {MAP ENTER ROOM}
+{
+  ${refresh.minimap}
+}
+
+#VARIABLE         {refresh.minimap}  {#MAP {map} {40x30} {minimap} {a}}
+#VARIABLE         {result}  {}
+#VARIABLE         {roomarea}  {}
+#VARIABLE         {roomname}  {}

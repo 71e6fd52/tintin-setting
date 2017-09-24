@@ -1,0 +1,15 @@
+#ALIAS 5 look
+#ALIAS 4 west
+#ALIAS 6 east
+#ALIAS 8 north
+#ALIAS 2 south
+#ALIAS 7 northwest
+#ALIAS 9 northeast
+#ALIAS 1 southwest
+#ALIAS 3 southeast
+
+#ALIAS - up
+#ALIAS + down
+
+#ALIAS / enter
+#ALIAS * out

@@ -1,0 +1,4 @@
+#action {http://pkuxkx.net/antirobot/robot.php?filename=%1}
+{
+  #system google-chrome-stable http://pkuxkx.net/antirobot/robot.php?filename=%1
+}

@@ -1,0 +1,4 @@
+#action {%*жусзЁ╜мЙак%*}
+{
+  #system notify-send \"chao jing OVER\";
+}
