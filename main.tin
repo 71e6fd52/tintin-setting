@@ -46,5 +46,6 @@
 #READ key.tin
 #READ shui_bed.tin
 #READ map.tin
+#READ wang.tin
 #SESSION beixia mud.pkuxkx.net 8080; hbogpnfc; 123abc
 #SPLIT
